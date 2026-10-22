@@ -9,7 +9,7 @@
   var esc = function(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); };
   var affs = (P.affirmations||[]).filter(Boolean);
   var name = P.prenom ? ', <em>'+esc(P.prenom)+'</em>' : '';
-  var list = affs.length ? '<details><summary>Ce que contient ton audio</summary><ol>'+affs.map(function(a){ return '<li>'+esc(/[.!?…]$/.test(a)?a:a+'.')+'</li>'; }).join('')+'</ol></details>' : '';
+  var list = affs.length ? '<details><summary>Ce que contient ton audio (déroule ici)</summary><ol>'+affs.map(function(a){ return '<li>'+esc(/[.!?…]$/.test(a)?a:a+'.')+'</li>'; }).join('')+'</ol></details>' : '';
   var upsell = (P.offre!=="Audio + Analyse" && /^https:\/\//.test(STRIPE_ANALYSE)) ?
     '<a class="down" href="#analyse" aria-label="Voir plus bas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a>'+
     '<aside class="up" id="analyse"><p class="up-t">Tu veux mon avis d\'experte sur ce qui se passe entre\u00a0vous\u00a0?</p>'+
@@ -23,7 +23,7 @@
     '<p class="intro">Installe-toi, appuie sur le bouton et pose ton téléphone. Tu n\'as rien d\'autre à faire.</p>'+
     '<button class="play" id="play" aria-label="Lancer l\'audio"><svg id="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg></button>'+
     '<p class="status" id="status" aria-live="polite"></p>'+
-    '<fieldset><legend>Arrêt automatique</legend><div class="chips">'+
+    '<fieldset><div class="chips" role="radiogroup" aria-label="Arrêt automatique">'+
     '<label><input type="radio" name="t" value="15"><span>15 min</span></label><label><input type="radio" name="t" value="60"><span>1 h</span></label><label><input type="radio" name="t" value="240"><span>4 h</span></label><label><input type="radio" name="t" value="480" checked><span>8 h</span></label>'+
     '</div></fieldset>'+ list +
     '<p class="note">Tes phrases sont cachées sous une musique douce, à un volume que l\'oreille ne perçoit pas consciemment.</p>'+
