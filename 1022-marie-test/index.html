@@ -2,7 +2,7 @@
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#150a2e">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Mon Audio">
-<title>Ton Audio sur-mesure</title>
+<title>Ton audio subliminal personnalisé</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap">
 <style>
 :root{--bg:#0b0618;--text:#efe9ff;--muted:#b9addb;--soft:#cfc4ea;--pink:#f7c3e3;--accent:#f0a6d8;--on:#1a0b2e;--line:rgba(247,180,222,.22);color-scheme:dark}
@@ -27,7 +27,7 @@ details{width:100%;border-top:1px solid var(--line);padding-top:18px}summary{cur
 ol{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px;text-align:left}ol li{font:italic 500 19px/1.35 Lora,Georgia,serif}
 .note{font-size:14px;color:var(--muted);max-width:36ch;margin:0}
 </style></head><body><main>
-<div><div class="tag">Ton Audio sur-mesure</div><h1>Bonne nuit, <em>Marie test</em></h1></div>
+<div><div class="tag">Ton audio subliminal personnalisé</div><h1>Bonne écoute, <em>Marie test</em></h1></div>
 <p class="intro">Installe-toi, baisse la lumière, appuie sur le bouton et pose ton téléphone. Tu n'as rien d'autre à faire.</p>
 <button class="play" id="play" aria-label="Lancer l'audio"><svg id="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg></button>
 <p class="status" id="status" aria-live="polite"></p>
@@ -51,5 +51,5 @@ btn.addEventListener('click',async()=>{if(a.paused){try{await a.play()}catch(e){
 a.addEventListener('play',()=>{btn.classList.add('on');ic.innerHTML=PAUSE;btn.setAttribute('aria-label','Mettre en pause');arm();clearInterval(tick);tick=setInterval(()=>{if(endAt&&Date.now()>=endAt)a.pause();show()},20000)});
 a.addEventListener('pause',()=>{btn.classList.remove('on');ic.innerHTML=PLAY;btn.setAttribute('aria-label',"Lancer l'audio");clearTimeout(timer);clearInterval(tick);endAt=0;show()});
 document.querySelectorAll('input[name=t]').forEach(r=>r.addEventListener('change',arm));
-if('mediaSession' in navigator){navigator.mediaSession.metadata=new MediaMetadata({title:'Ton Audio sur-mesure',artist:'Musique douce'})}
+if('mediaSession' in navigator){navigator.mediaSession.metadata=new MediaMetadata({title:'Ton audio subliminal personnalisé',artist:'Musique douce'})}
 </script></body></html>
