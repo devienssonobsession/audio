@@ -5,7 +5,7 @@
 body{margin:0;color:var(--text);font:16px/1.55 Outfit,system-ui,sans-serif;background:radial-gradient(ellipse 80% 50% at 50% 40%,rgba(236,100,180,.18),transparent 70%),linear-gradient(180deg,#120722,#1a0b2e 50%,#120722) fixed,var(--bg);padding:env(safe-area-inset-top) max(16px,env(safe-area-inset-right)) env(safe-area-inset-bottom) max(16px,env(safe-area-inset-left))}
 main{max-width:440px;margin:0 auto;padding:28px 0 40px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
 .tag{display:inline-block;font:italic 500 18px Lora,Georgia,serif;color:var(--pink);border:1px solid var(--line);border-radius:999px;padding:7px 22px;background:rgba(255,255,255,.04)}
-h1{font:italic 600 clamp(42px,12vw,56px)/1.05 Lora,Georgia,serif;margin:6px 0 0;text-wrap:balance}h1 em{color:var(--pink)}
+h1{font:italic 600 clamp(42px,12vw,56px)/1.05 Lora,Georgia,serif;margin:18px 0 0;text-wrap:balance}h1 em{color:var(--pink)}
 .intro{color:var(--soft);font-weight:300;font-size:17px;max-width:32ch;margin:0}
 .play{width:132px;height:132px;border-radius:50%;border:0;background:radial-gradient(circle at 38% 32%,#fbe3f2 0%,#f0b2dc 45%,#e38ccc 100%);color:var(--on);cursor:pointer;display:grid;place-items:center;box-shadow:0 0 60px rgba(240,140,210,.45)}
 .play svg{width:46px;height:46px}.play.on{animation:b 6s ease-in-out infinite}@keyframes b{50%{box-shadow:0 0 100px rgba(240,140,210,.7)}}
@@ -18,7 +18,7 @@ legend{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--
 .chips span{display:block;padding:10px 18px;border-radius:999px;border:1px solid var(--line);font-weight:600}
 .chips input:checked+span{background:var(--accent);color:var(--on);border-color:var(--accent)}
 details{width:100%;border-top:1px solid var(--line);padding-top:18px}summary{cursor:pointer;list-style:none;color:var(--soft)}summary::-webkit-details-marker{display:none}summary::after{content:" ▾"}
-ol{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px;text-align:left}ol li{font:italic 500 19px/1.35 Lora,Georgia,serif}
+ol{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px;text-align:left}ol li{font:italic 500 16px/1.4 Lora,Georgia,serif}
 .note{font-size:14px;color:var(--muted);max-width:36ch;margin:0}
 .down{display:block;color:var(--pink);opacity:.75;margin-top:8px;padding:6px;animation:d 2.6s ease-in-out infinite}.down svg{width:30px;height:30px;display:block}
 @keyframes d{50%{transform:translateY(6px)}}@media (prefers-reduced-motion:reduce){.down{animation:none}}
