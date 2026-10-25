@@ -2,7 +2,7 @@
    Modifier ce fichier change toutes les pages d'écoute en une fois. */
 (function(){
   /* ---- Réglages communs ---- */
-  var STRIPE_ANALYSE = "";            /* ton lien Stripe pour l'Analyse seule ; vide = l'encadré n'apparaît pas */
+  var STRIPE_ANALYSE = "https://buy.stripe.com/28E7sM3Cp8Si6ai7Ya6wE0r";            /* ton lien Stripe pour l'Analyse seule ; vide = l'encadré n'apparaît pas */
   var PRIX = "20 €", PRIX_BARRE = "40 €";
 
   var P = window.PAGE || {};
